@@ -23,7 +23,7 @@ function Workers() {
         <div className='workers-page'>
             <div className="companies-section">
                 {list.map((company, index) => (
-                        <React.Fragment>
+                        <React.Fragment key={index}>
                             {index !== 0 && <DashedLine />}
                             <CompanyBadge
                                 name={company.name}

@@ -7,6 +7,8 @@ const initialState: CompanyState = {
     selectedCompany: 0,
     error: undefined,
     list: [],
+    isRegistrationMode: false,
+    isDeleteModalOpen: false,
 };
 
 const companySlicer = createSlice({
@@ -16,6 +18,12 @@ const companySlicer = createSlice({
         setSelectedCompany(state, action) {
             state.selectedCompany = action.payload;
         },
+        setRegistrationMode(state, action) {
+            state.isRegistrationMode = action.payload;
+        },
+        setDeleteModalOpen(state, action) {
+            state.isDeleteModalOpen = action.payload;
+        }
     },
     extraReducers: (builder) => {
         builder
@@ -25,7 +33,15 @@ const companySlicer = createSlice({
             })
             .addCase(getCompanies.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.list = action.payload;
+                state.list = action.payload.map((company) => {
+                    return {
+                        ...company,
+                        workers: [],
+                        roles: [],
+                        activities: [],
+                        equipments: [],
+                    };
+                });
             })
             .addCase(getCompanies.rejected, (state, action) => {
                 state.isLoading = false;
@@ -38,7 +54,15 @@ const companySlicer = createSlice({
             .addCase(getWorkers.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.list.forEach((company, index) => {
-                    state.list[index].workers = action.payload.filter((worker) => worker.companyId === company.id);
+                    state.list[index].workers = action.payload
+                        .filter((worker) => worker.companyId === company.id)
+                        .map((worker) => {
+                            return {
+                                ...worker,
+                                activities: [],
+                                role: "",
+                            }
+                        });
                 });
             })
             .addCase(getWorkers.rejected, (state, action) => {
@@ -82,6 +106,12 @@ const companySlicer = createSlice({
                 state.list.forEach((company, index) => {
                     state.list[index].roles = action.payload.filter((roles) => roles.companyId === company.id);
                 });
+
+                state.list.forEach((company, index) => {
+                    state.list[index].workers.forEach((worker, workerIndex) => {
+                        state.list[index].workers[workerIndex].role = company.roles.find((role) => role.id === worker.roleId)!.name;
+                    })
+                })
             })
             .addCase(getRoles.rejected, (state, action) => {
                 state.isLoading = false;
@@ -99,8 +129,10 @@ const companySlicer = createSlice({
                         state.list[index].workers[workerIndex].activities = activitiesWorker
                             .filter((activity) => activity.workerId === worker.id)
                             .map((activity) => {
+                                const activityObj = company.activities.find((act) => act.id === activity.activityId);
                                 return {
                                     ...activity,
+                                    name: activityObj ? activityObj.name : "Generico",
                                     equipments: company.equipments.filter((equipment) => activity.equipmentsId.includes(equipment.id)),
                                 }
                             });
@@ -114,5 +146,5 @@ const companySlicer = createSlice({
     },
 });
 
-export const { setSelectedCompany } = companySlicer.actions;
+export const { setSelectedCompany, setRegistrationMode, setDeleteModalOpen } = companySlicer.actions;
 export default companySlicer.reducer;

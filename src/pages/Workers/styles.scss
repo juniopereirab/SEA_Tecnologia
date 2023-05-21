@@ -3,10 +3,14 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 32px;
+    align-self: center;
+    max-width: 1309px;
 
     .companies-section {
         width: 100%;
+        max-width: 1245px;
         height: 159px;
         border-radius: 20px;
         background: #FFFFFF;
@@ -19,6 +23,7 @@
     .workers-section {
         width: 100%;
         display: flex;
+        justify-content: center;
         gap: 35px;
         margin: 32px 0 12px;
 

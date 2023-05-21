@@ -1,0 +1,30 @@
+.worker-card {
+    width: 100%;
+    background: #EDF1F5;
+    opacity: 0.85;
+    border-radius: 10px;
+    height: 84px;
+    display: flex;
+    justify-content: space-between;
+
+    span.worker-name {
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: #707070;
+    }
+
+    .info-badge {
+        background: #4FA1C1;
+        border-radius: 36px;
+        padding: 4px 16px;
+        display: flex;
+        align-items: center;
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+}

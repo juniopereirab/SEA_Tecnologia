@@ -65,10 +65,11 @@
             "rg": "1234567",
             "documentUrl": "",
             "roleId": 1,
-            "companyId": 1
+            "companyId": 1,
+            "isActive": true
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Maria Eduarda",
             "isMale": false,
             "birthdate": "2023-05-19T15:30:00.000Z",
@@ -76,7 +77,8 @@
             "rg": "1234567",
             "documentUrl": "",
             "roleId": 2,
-            "companyId": 2
+            "companyId": 2,
+            "isActive": true
         }
     ],
     "activities": [
@@ -210,6 +212,13 @@
             "workerId": 1,
             "companyId": 1,
             "equipmentsId": [1, 8]
+        },
+        {
+            "id": 2,
+            "activityId": 2,
+            "workerId": 2,
+            "companyId": 2,
+            "equipmentsId": [2]
         }
     ]
 }

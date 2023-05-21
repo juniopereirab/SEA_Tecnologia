@@ -24,6 +24,7 @@ interface IActivitiesWorkers {
     workerId: number;
     companyId: number;
     equipments: IEquipments[];
+    name: string;
 }
 
 interface IWorker {
@@ -35,8 +36,10 @@ interface IWorker {
     rg: string;
     documentUrl?: string;
     roleId: number;
+    role: string;
     companyId: number;
     activities: IActivitiesWorkers[];
+    isActive: boolean;
 }
 
 interface ICompany {
@@ -55,6 +58,8 @@ type CompanyState = {
     isLoading: boolean;
     error?: string;
     selectedCompany: number;
+    isRegistrationMode: boolean;
+    isDeleteModalOpen: boolean;
 };
 
 type RootState = {
