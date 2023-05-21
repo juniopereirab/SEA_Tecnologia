@@ -15,4 +15,29 @@
         overflow-x: auto;
         padding: 25px 29px 0;
     }
+
+    .workers-section {
+        width: 100%;
+        display: flex;
+        gap: 35px;
+        margin: 32px 0 12px;
+
+        .company-description {
+            width: 100%;
+            max-width: 447px;
+            min-height: 484px;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            padding: 26px 16px;
+
+            span {
+                font-family: 'Ubuntu';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #707070;
+            }
+        }
+    }
 }

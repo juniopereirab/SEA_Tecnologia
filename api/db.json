@@ -209,7 +209,7 @@
             "activityId": 1,
             "workerId": 1,
             "companyId": 1,
-            "equipments": [1, 8]
+            "equipmentsId": [1, 8]
         }
     ]
 }
