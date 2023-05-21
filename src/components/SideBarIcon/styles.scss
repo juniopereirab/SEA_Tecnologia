@@ -1,0 +1,21 @@
+.sidebar-icon {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 5px;
+            height: 32px;
+            left: 0;
+            background-color: white;
+        }
+    }
+}

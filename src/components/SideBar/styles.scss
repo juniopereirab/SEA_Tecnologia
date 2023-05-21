@@ -1,0 +1,20 @@
+.sidebar {
+    background-color: #4FA1C1;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    border-radius: 0px 20px 20px 0px;
+    width: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-block {
+    width: 57px;
+    height: 41px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 50px;
+}

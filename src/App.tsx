@@ -1,55 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback, useEffect } from 'react';
+import './App.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCompanies } from './store/actions/company';
+import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
+import AppRoutes from './router';
+import { Layout } from 'antd';
+
+type AppDispatch = ThunkDispatch<RootState, void, AnyAction>;
 
 function App() {
+  const dispatch: AppDispatch = useDispatch();
+  const { list } = useSelector((state: RootState) => state.company);
+
+  const loadCompanies = useCallback(() => {
+    if (list.length === 0) {
+      dispatch(getCompanies());
+    }
+  }, [dispatch, list]);
+
+  useEffect(() => {
+    loadCompanies();
+  }, [loadCompanies]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Layout style={{paddingLeft: '57px'}}>
+      <AppRoutes />
+    </Layout>
   );
 }
 

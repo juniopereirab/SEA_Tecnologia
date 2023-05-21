@@ -1,0 +1,37 @@
+.badge-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 70px;
+    min-width: 70px;
+    white-space: nowrap;
+    align-items: center;
+
+    span {
+        font-family: 'Ubuntu';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #4FA1C1;
+        text-transform: uppercase;
+
+        &.name {
+            display: inline-block;
+            margin-top: 12px;
+        }
+    }
+}
+
+.company-badge {
+    width: 70px;
+    height: 70px;
+    background: #4FA1C1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+        border: 1px solid #0E34FF;
+    }
+}
