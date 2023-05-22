@@ -10,6 +10,7 @@ import WorkerForm from '../../components/WorkerForm';
 import { Modal } from 'antd';
 import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
 import { deleteWorker } from '../../store/actions/company';
+import ShadowIcon from '../../icons/Shadow.svg';
 
 type AppDispatch = ThunkDispatch<RootState, void, AnyAction>;
 
@@ -41,6 +42,7 @@ function Workers() {
     return (
         <React.Fragment>
             <div className='workers-page'>
+                <img src={ShadowIcon} alt="shadow" className="shadow-image"/>
                 <div className="companies-section">
                     {list.map((company, index) => (
                             <React.Fragment key={index}>

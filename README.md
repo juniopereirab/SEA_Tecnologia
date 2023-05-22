@@ -1,46 +1,59 @@
-# Getting Started with Create React App
+# SEA Tecnologia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+Projeto técnico do Processo Seletivo da SEA Tecnologia
 
-## Available Scripts
+![](./images/main.png)
 
-In the project directory, you can run:
+## Descrição
 
-### `yarn start`
+A principal página desenvolvida para o projeto foi baseado no protótipo do [Figma](https://www.figma.com/file/gGePjuPTHdH7pISofjrzxB/Desafio-React?type=design&node-id=8-8&t=FX1K5qxoaUjWtxu8-0), que é a página de CRUD de Funcionários.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Outras páginas foram adicionadas para exibir a funcionalidade de navegação, porém não possuem conteúdo interno.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tecnologias utilizadas
 
-### `yarn test`
+Foram utilizadas algumas tecnologias para o desenvolvimento desse projeto, que estão listadas abaixo com suas respectivas descrições:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- json-server : Mock de API.
+- Ant Design: Biblioteca de estilos do React, foi utilizado principalmente para certa organização de alguns componentes, como modal, botões dropdown, etc.
+- Formik: Biblioteca de controle de formulários, foi utilizado para realizar a organização e validação do formulário de criação e edição de funcionários.
+- Redux: Biblioteca de controle de estados, foi utilizado para o controle de dados carregados da API pela aplicação, além de controlar o estado dos elementos principais ao realizar modificações na API ou na próprio aplicação.
+- SASS: Extensão de linguagem do CSS que realiza uma organização mais criteriosa dos arquivos de estilo.
+- TypeScript: Linguagem oriunda do JavaScript que tem um alto poder de linguagem, utilizado nesse projeto para facilitar o desenvolvimento.
+- Yup: Biblioteca de validação que é utilizado em conjunto com o Formik.
 
-### `yarn build`
+## Funcionalidades
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+É possível nesse projeto: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Criar funcionários.
+- Deletar funcionários.
+- Editar funcionários.
+- Filtrar funcionários ativos.
+- Acessar listagem de funcionários e descrição de várias empresas.
+- Editar propriedade da empresa, se a "Etapa está concluida" ou não.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Como executar
 
-### `yarn eject`
+Para rodar o projeto, basta executar os seguintes comandos:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+$ git clone https://github.com/juniopereirab/SEA_Tecnologia
+$ cd SEA_Tecnologia
+$ yarn install  # Será instalado as dependências
+$ yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Além disso é necessário executar a API Mock criada com o json-server, para isso, basta rodar os seguintes comandos, na pasta raiz do projeto:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+$ json-server api/db.json -p 8000
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A flag `-p` é necessário para a configuração da porta que será executado a API, caso seja escolhida uma porta diferente, lembre-se de alterar o arquivo [.env](./.env).
 
-## Learn More
+Obs.: É necessário ter o json-server instalado, caso não tenha instalado na sua máquina, basta executar o comando:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm install -g json-server
+```
