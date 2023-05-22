@@ -65,3 +65,16 @@ type CompanyState = {
 type RootState = {
     company: CompanyState;
 }
+
+interface ISelectOptionInput {
+    value: string | number;
+    label: string;
+}
+
+
+interface ICurrentActivity {
+    companyId: number | null;
+    activityId: number | null;
+    workerId: number | null;
+    equipmentsId: Array<number>;
+}

@@ -1,0 +1,18 @@
+.epi-act {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin: 12px 0;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3A3A3A;
+
+    input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}

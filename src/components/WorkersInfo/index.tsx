@@ -1,9 +1,10 @@
 import React from 'react'
 import "./styles.scss"
 import { Button, Space } from 'antd'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import WorkerCard from '../WorkerCard'
 import Switcher from '../Switcher'
+import { setRegistrationMode } from '../../store/reducers/company'
 
 const buttonStyles: React.CSSProperties = {
     width: '100%',
@@ -31,17 +32,22 @@ const filterButtons: React.CSSProperties = {
 }
 
 function WorkersInfo() {
+    const dispatch = useDispatch();
     const { list, selectedCompany } = useSelector((state: RootState) => state.company);
 
     const handleSwitcherAction = (checked: boolean) => {
         console.log(checked);
+    }
+    
+    const handleRegistrationMode = () => {
+        dispatch(setRegistrationMode(true));
     }
 
     return (
         <div className='workers-info'>
             <div className="title">Funcionário(s)</div>
             <Space style={{padding: '30px 20px', width: '100%'}} direction='vertical' size={20}>
-                <Button style={buttonStyles}>+ Adicionar funcionário</Button>
+                <Button style={buttonStyles} onClick={handleRegistrationMode}>+ Adicionar funcionário</Button>
                 <Space style={{justifyContent: 'space-between', width: '100%'}}>
                     <Space size={30}>
                         <Button style={filterButtons}>Ver apenas ativos</Button>

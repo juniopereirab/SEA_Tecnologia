@@ -6,10 +6,11 @@ import DashedLine from '../../components/DashedLine';
 import { setSelectedCompany } from '../../store/reducers/company';
 import NextButton from '../../components/NextButton';
 import WorkersInfo from '../../components/WorkersInfo';
+import WorkerForm from '../../components/WorkerForm';
 
 function Workers() {
     const dispatch = useDispatch();
-    const { list, selectedCompany } = useSelector((state: RootState) => state.company);
+    const { list, selectedCompany, isRegistrationMode } = useSelector((state: RootState) => state.company);
 
     const selectCompany = (index: number) => {
         dispatch(setSelectedCompany(index));
@@ -39,7 +40,7 @@ function Workers() {
                 <div className="company-description">
                     <span>{list[selectedCompany].description}</span>
                 </div>
-                <WorkersInfo />
+                {isRegistrationMode ? <WorkerForm /> : <WorkersInfo />}
             </div>
             <NextButton />
         </div>

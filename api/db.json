@@ -116,6 +116,11 @@
             "id": 7,
             "name": "Supervisão",
             "companyId": 7
+        },
+        {
+            "id": 8,
+            "name": "Supervisão 2",
+            "companyId": 1
         }
     ],
     "equipments": [
@@ -164,7 +169,7 @@
         {
             "id": 8,
             "name": "Chapeu",
-            "numberCA": "12341",
+            "numberCA": "1234144323",
             "companyId": 1
         }
     ],
