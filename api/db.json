@@ -1,229 +1,230 @@
 {
-    "companies": [
-        {
-            "id": 1,
-            "name": "Empresa 1",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
-            "isRegistrationDone": true
-        },
-        {
-            "id": 2,
-            "name": "Empresa 2",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
-            "isRegistrationDone": false
-        },
-        {
-            "id": 3,
-            "name": "Empresa 3",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
-            "isRegistrationDone": false
-        },
-        {
-            "id": 4,
-            "name": "Empresa 4",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
-            "isRegistrationDone": false
-        },
-        {
-            "id": 5,
-            "name": "Empresa 5",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
-            "isRegistrationDone": false
-        },
-        {
-            "id": 6,
-            "name": "Empresa 6",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
-            "isRegistrationDone": false
-        },
-        {
-            "id": 7,
-            "name": "Empresa 7",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
-            "isRegistrationDone": false
-        },
-        {
-            "id": 8,
-            "name": "Empresa 6",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
-            "isRegistrationDone": false
-        },
-        {
-            "id": 9,
-            "name": "Empresa 7",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
-            "isRegistrationDone": false
-        }
-    ],
-    "workers": [
-        {
-            "id": 1,
-            "name": "Jose Carlos",
-            "isMale": true,
-            "birthdate": "2023-05-19T15:30:00.000Z",
-            "cpf": "12345678900",
-            "rg": "1234567",
-            "documentUrl": "",
-            "roleId": 1,
-            "companyId": 1,
-            "isActive": true
-        },
-        {
-            "id": 2,
-            "name": "Maria Eduarda",
-            "isMale": false,
-            "birthdate": "2023-05-19T15:30:00.000Z",
-            "cpf": "12345678900",
-            "rg": "1234567",
-            "documentUrl": "",
-            "roleId": 2,
-            "companyId": 2,
-            "isActive": true
-        }
-    ],
-    "activities": [
-        {
-            "id": 1,
-            "name": "Supervisão",
-            "companyId": 1
-        },
-        {
-            "id": 2,
-            "name": "Supervisão",
-            "companyId": 2
-        },
-        {
-            "id": 3,
-            "name": "Supervisão",
-            "companyId": 3
-        },
-        {
-            "id": 4,
-            "name": "Supervisão",
-            "companyId": 4
-        },
-        {
-            "id": 5,
-            "name": "Supervisão",
-            "companyId": 5
-        },
-        {
-            "id": 6,
-            "name": "Supervisão",
-            "companyId": 6
-        },
-        {
-            "id": 7,
-            "name": "Supervisão",
-            "companyId": 7
-        },
-        {
-            "id": 8,
-            "name": "Supervisão 2",
-            "companyId": 1
-        }
-    ],
-    "equipments": [
-        {
-            "id": 1,
-            "name": "Bota",
-            "numberCA": "12341",
-            "companyId": 1
-        },
-        {
-            "id": 2,
-            "name": "Bota",
-            "numberCA": "12341",
-            "companyId": 2
-        },
-        {
-            "id": 3,
-            "name": "Bota",
-            "numberCA": "12341",
-            "companyId": 3
-        },
-        {
-            "id": 4,
-            "name": "Bota",
-            "numberCA": "12341",
-            "companyId": 4
-        },
-        {
-            "id": 5,
-            "name": "Bota",
-            "numberCA": "12341",
-            "companyId": 5
-        },
-        {
-            "id": 6,
-            "name": "Bota",
-            "numberCA": "12341",
-            "companyId": 6
-        },
-        {
-            "id": 7,
-            "name": "Bota",
-            "numberCA": "12341",
-            "companyId": 7
-        },
-        {
-            "id": 8,
-            "name": "Chapeu",
-            "numberCA": "1234144323",
-            "companyId": 1
-        }
-    ],
-    "roles": [
-        {
-            "id": 1,
-            "name": "Supervisor",
-            "companyId": 1
-        },
-        {
-            "id": 2,
-            "name": "Supervisor",
-            "companyId": 2
-        },
-        {
-            "id": 3,
-            "name": "Supervisor",
-            "companyId": 3
-        },
-        {
-            "id": 4,
-            "name": "Supervisor",
-            "companyId": 4
-        },
-        {
-            "id": 5,
-            "name": "Supervisor",
-            "companyId": 5
-        },
-        {
-            "id": 6,
-            "name": "Supervisor",
-            "companyId": 6
-        },
-        {
-            "id": 7,
-            "name": "Supervisor",
-            "companyId": 7
-        }
-    ],
-    "activitiesWorkers": [
-        {
-            "id": 1,
-            "activityId": 1,
-            "workerId": 1,
-            "companyId": 1,
-            "equipmentsId": [1, 8]
-        },
-        {
-            "id": 2,
-            "activityId": 2,
-            "workerId": 2,
-            "companyId": 2,
-            "equipmentsId": [2]
-        }
-    ]
+  "companies": [
+    {
+      "isRegistrationDone": true,
+      "id": 1
+    },
+    {
+      "isRegistrationDone": true,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Empresa 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
+      "isRegistrationDone": false
+    },
+    {
+      "id": 4,
+      "name": "Empresa 4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
+      "isRegistrationDone": false
+    },
+    {
+      "id": 5,
+      "name": "Empresa 5",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
+      "isRegistrationDone": false
+    },
+    {
+      "id": 6,
+      "name": "Empresa 6",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
+      "isRegistrationDone": false
+    },
+    {
+      "id": 7,
+      "name": "Empresa 7",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
+      "isRegistrationDone": false
+    },
+    {
+      "id": 8,
+      "name": "Empresa 6",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
+      "isRegistrationDone": false
+    },
+    {
+      "id": 9,
+      "name": "Empresa 7",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut at tristique libero, nec efficitur dui. Aliquam erat volutpat. Fusce quam sem, tempus nec justo eget, luctus scelerisque velit. Nam sollicitudin purus urna, vitae ornare neque tincidunt vel. Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus eu vulputate tempus",
+      "isRegistrationDone": false
+    }
+  ],
+  "workers": [
+    {
+      "id": 2,
+      "name": "Maria Eduarda",
+      "isMale": false,
+      "birthdate": "2023-05-19T15:30:00.000Z",
+      "cpf": "12345678900",
+      "rg": "1234567",
+      "documentUrl": "",
+      "roleId": 2,
+      "companyId": 2,
+      "isActive": true
+    },
+    {
+      "name": "Maria",
+      "isMale": true,
+      "cpf": "21323112313",
+      "rg": "3131231",
+      "birthdate": "2023-05-23T13:49:01.123Z",
+      "companyId": 1,
+      "isActive": false,
+      "roleId": 1,
+      "id": 4
+    },
+    {
+      "name": "Damaso",
+      "isMale": true,
+      "cpf": "13131313123",
+      "rg": "3112313",
+      "birthdate": "2023-05-17T15:24:45.937Z",
+      "companyId": 1,
+      "isActive": true,
+      "roleId": 1,
+      "id": 5
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "name": "Supervisão",
+      "companyId": 1
+    },
+    {
+      "id": 2,
+      "name": "Supervisão",
+      "companyId": 2
+    },
+    {
+      "id": 3,
+      "name": "Supervisão",
+      "companyId": 3
+    },
+    {
+      "id": 4,
+      "name": "Supervisão",
+      "companyId": 4
+    },
+    {
+      "id": 5,
+      "name": "Supervisão",
+      "companyId": 5
+    },
+    {
+      "id": 6,
+      "name": "Supervisão",
+      "companyId": 6
+    },
+    {
+      "id": 7,
+      "name": "Supervisão",
+      "companyId": 7
+    },
+    {
+      "id": 8,
+      "name": "Supervisão 2",
+      "companyId": 1
+    }
+  ],
+  "equipments": [
+    {
+      "id": 1,
+      "name": "Bota",
+      "numberCA": "12341",
+      "companyId": 1
+    },
+    {
+      "id": 2,
+      "name": "Bota",
+      "numberCA": "12341",
+      "companyId": 2
+    },
+    {
+      "id": 3,
+      "name": "Bota",
+      "numberCA": "12341",
+      "companyId": 3
+    },
+    {
+      "id": 4,
+      "name": "Bota",
+      "numberCA": "12341",
+      "companyId": 4
+    },
+    {
+      "id": 5,
+      "name": "Bota",
+      "numberCA": "12341",
+      "companyId": 5
+    },
+    {
+      "id": 6,
+      "name": "Bota",
+      "numberCA": "12341",
+      "companyId": 6
+    },
+    {
+      "id": 7,
+      "name": "Bota",
+      "numberCA": "12341",
+      "companyId": 7
+    },
+    {
+      "id": 8,
+      "name": "Chapeu",
+      "numberCA": "1234144323",
+      "companyId": 1
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "Supervisor",
+      "companyId": 1
+    },
+    {
+      "id": 2,
+      "name": "Supervisor",
+      "companyId": 2
+    },
+    {
+      "id": 3,
+      "name": "Supervisor",
+      "companyId": 3
+    },
+    {
+      "id": 4,
+      "name": "Supervisor",
+      "companyId": 4
+    },
+    {
+      "id": 5,
+      "name": "Supervisor",
+      "companyId": 5
+    },
+    {
+      "id": 6,
+      "name": "Supervisor",
+      "companyId": 6
+    },
+    {
+      "id": 7,
+      "name": "Supervisor",
+      "companyId": 7
+    }
+  ],
+  "activitiesWorkers": [
+    {
+      "id": 2,
+      "activityId": 2,
+      "workerId": 2,
+      "companyId": 2,
+      "equipmentsId": [
+        2
+      ]
+    }
+  ]
 }

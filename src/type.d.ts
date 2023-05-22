@@ -31,7 +31,7 @@ interface IWorker {
     id: number;
     name: string;
     isMale: boolean;
-    birthdate: Date | string;
+    birthdate: string;
     cpf: string;
     rg: string;
     documentUrl?: string;
@@ -60,6 +60,9 @@ type CompanyState = {
     selectedCompany: number;
     isRegistrationMode: boolean;
     isDeleteModalOpen: boolean;
+    selectedWorker: IWorker | null;
+    workerId: number | null;
+    isActiveFilter: boolean;
 };
 
 type RootState = {
@@ -73,8 +76,14 @@ interface ISelectOptionInput {
 
 
 interface ICurrentActivity {
+    id?: number;
     companyId: number | null;
     activityId: number | null;
     workerId: number | null;
     equipmentsId: Array<number>;
+}
+
+interface ICompanyUpdate {
+    id: number;
+    isRegistrationDone: boolean;
 }

@@ -4,7 +4,9 @@ import { Button, Space } from 'antd'
 import { useDispatch, useSelector } from 'react-redux'
 import WorkerCard from '../WorkerCard'
 import Switcher from '../Switcher'
-import { setRegistrationMode } from '../../store/reducers/company'
+import { setIsActiveFilter, setRegistrationMode } from '../../store/reducers/company'
+import { updateCompany } from '../../store/actions/company'
+import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit'
 
 const buttonStyles: React.CSSProperties = {
     width: '100%',
@@ -31,17 +33,35 @@ const filterButtons: React.CSSProperties = {
     border: '1px solid #4FA1C1'
 }
 
+const activeButton: React.CSSProperties = {
+    color: '#FFFFFF',
+    background: '#4FA1C1'
+}
+
+type AppDispatch = ThunkDispatch<RootState, void, AnyAction>;
+
 function WorkersInfo() {
-    const dispatch = useDispatch();
-    const { list, selectedCompany } = useSelector((state: RootState) => state.company);
+    const dispatch: AppDispatch = useDispatch();
+    const { list, selectedCompany, isActiveFilter } = useSelector((state: RootState) => state.company);
 
     const handleSwitcherAction = (checked: boolean) => {
-        console.log(checked);
+        dispatch(updateCompany({
+            id: list[selectedCompany].id,
+            isRegistrationDone: checked,
+        }))
     }
     
     const handleRegistrationMode = () => {
-        dispatch(setRegistrationMode(true));
+        dispatch(setRegistrationMode({
+            isRegistrationMode: true,
+            worker: null,
+        }));
     }
+
+    const activeStyle = isActiveFilter ? activeButton : {}
+    const activeWorkers = list[selectedCompany].workers.filter((worker) => worker.isActive);
+    const allWorkers = list[selectedCompany].workers;
+    const workers = isActiveFilter ? activeWorkers : allWorkers;
 
     return (
         <div className='workers-info'>
@@ -50,13 +70,13 @@ function WorkersInfo() {
                 <Button style={buttonStyles} onClick={handleRegistrationMode}>+ Adicionar funcionário</Button>
                 <Space style={{justifyContent: 'space-between', width: '100%'}}>
                     <Space size={30}>
-                        <Button style={filterButtons}>Ver apenas ativos</Button>
-                        <Button style={filterButtons}>Limpar Filtros</Button>
+                        <Button style={{...filterButtons, ...activeStyle}} onClick={() => dispatch(setIsActiveFilter(!isActiveFilter))}>Ver apenas ativos</Button>
+                        <Button style={filterButtons} onClick={() => dispatch(setIsActiveFilter(false))}>Limpar Filtros</Button>
                     </Space>
-                    <span className="info">Ativos 2/25</span>
+                    <span className="info">Ativos {activeWorkers.length}/{allWorkers.length}</span>
                 </Space>
                 <Space style={{width: '100%'}} direction='vertical' size={14}>
-                    {list[selectedCompany].workers.map((worker, index) => (
+                    {workers.map((worker, index) => (
                         <WorkerCard worker={worker} key={`worker${index}`} />
                     ))}
                 </Space>

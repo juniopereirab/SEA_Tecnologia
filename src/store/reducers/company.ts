@@ -1,6 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-import { getActivities, getActivitiesWorkers, getCompanies, getEquipments, getRoles, getWorkers } from "../actions/company";
+import { createWorker, deleteWorker, getActivities, getActivitiesWorkers, getCompanies, getEquipments, getRoles, getWorkers, updateCompany, updateWorker } from "../actions/company";
 
 const initialState: CompanyState = {
     isLoading: false,
@@ -8,21 +8,31 @@ const initialState: CompanyState = {
     error: undefined,
     list: [],
     isRegistrationMode: false,
+    selectedWorker: null,
     isDeleteModalOpen: false,
+    workerId: null,
+    isActiveFilter: false,
 };
 
 const companySlicer = createSlice({
     name: 'Company',
     initialState,
     reducers: {
-        setSelectedCompany(state, action) {
+        setSelectedCompany(state, action: PayloadAction<number>) {
             state.selectedCompany = action.payload;
+            state.isRegistrationMode = false;
+            state.selectedWorker = null;
         },
-        setRegistrationMode(state, action) {
-            state.isRegistrationMode = action.payload;
+        setRegistrationMode(state, action: PayloadAction<{isRegistrationMode: boolean; worker: IWorker | null}>) {
+            state.isRegistrationMode = action.payload.isRegistrationMode;
+            state.selectedWorker = action.payload.worker;
         },
-        setDeleteModalOpen(state, action) {
-            state.isDeleteModalOpen = action.payload;
+        setDeleteModalOpen(state, action: PayloadAction<{isDeleteModalOpen: boolean, workerId: number | null}>) {
+            state.isDeleteModalOpen = action.payload.isDeleteModalOpen;
+            state.workerId = action.payload.workerId;
+        },
+        setIsActiveFilter(state, action: PayloadAction<boolean>) {
+            state.isActiveFilter = action.payload;
         }
     },
     extraReducers: (builder) => {
@@ -143,8 +153,93 @@ const companySlicer = createSlice({
                 state.isLoading = false;
                 state.error = action.error.message;
             })
+            .addCase(createWorker.pending, (state) => {
+                state.isLoading = true;
+                state.error = undefined;
+            })
+            .addCase(createWorker.fulfilled, (state, action) => {
+                state.isLoading = false;
+                const company = state.list[state.selectedCompany];
+                const newWorker: IWorker = action.payload;
+                newWorker.activities = newWorker.activities.map((activity) => {
+                    const activityObj = company.activities.find((act) => act.id === activity.activityId);
+                    return {
+                        ...activity,
+                        name: activityObj ? activityObj.name : "Generico",
+                        equipments: company.equipments.filter((equipment) => activity.equipmentsId.includes(equipment.id)),
+                    };
+                });
+
+                newWorker.role = company.roles.find((role) => role.id === newWorker.roleId)!.name;
+
+                state.list[state.selectedCompany].workers.push(newWorker);
+                state.isRegistrationMode = false;
+            })
+            .addCase(createWorker.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.error.message
+            })
+            .addCase(updateCompany.pending, (state) => {
+                state.isLoading = true;
+                state.error = undefined;
+            })
+            .addCase(updateCompany.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.list[state.selectedCompany] = {
+                    ...state.list[state.selectedCompany],
+                    ...action.payload
+                }
+            })
+            .addCase(updateCompany.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.error.message;
+            })
+            .addCase(updateWorker.pending, (state) => {
+                state.isLoading = true;
+                state.error = undefined;
+            })
+            .addCase(updateWorker.fulfilled, (state, action) => {
+                state.isLoading = false;
+                const company = state.list[state.selectedCompany];
+                const workerIndex = company.workers.findIndex((worker) => worker.id === action.payload.id);
+                const newWorker: IWorker = action.payload;
+
+                newWorker.activities = newWorker.activities.map((activity) => {
+                    const activityObj = company.activities.find((act) => act.id === activity.activityId);
+                    return {
+                        ...activity,
+                        name: activityObj ? activityObj.name : "Generico",
+                        equipments: company.equipments.filter((equipment) => activity.equipmentsId.includes(equipment.id)),
+                    };
+                });
+
+                newWorker.role = company.roles.find((role) => role.id === newWorker.roleId)!.name;
+                state.list[state.selectedCompany].workers[workerIndex] = newWorker;
+                state.isRegistrationMode = false;
+            })
+            .addCase(updateWorker.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.error.message;
+            })
+            .addCase(deleteWorker.pending, (state) => {
+                state.isLoading = true;
+                state.error = undefined;
+            })
+            .addCase(deleteWorker.fulfilled, (state) => {
+                state.isLoading = false;
+                const company = state.list[state.selectedCompany];
+                const workerIndex = company.workers.findIndex((worker) => worker.id === state.workerId);
+
+                state.list[state.selectedCompany].workers.splice(workerIndex, 1);
+                state.workerId = null;
+                state.isDeleteModalOpen = false;
+            })
+            .addCase(deleteWorker.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.error.message;
+            })
     },
 });
 
-export const { setSelectedCompany, setRegistrationMode, setDeleteModalOpen } = companySlicer.actions;
+export const { setSelectedCompany, setRegistrationMode, setDeleteModalOpen, setIsActiveFilter } = companySlicer.actions;
 export default companySlicer.reducer;

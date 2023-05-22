@@ -34,11 +34,12 @@ function EquipmentInput({ id, onChange, value, index, activityIndex }:IEquipment
                     Selecione o EPI:
                     <Select
                         bordered={false}
+                        defaultValue={null}
                         id={id}
-                        value={value}
                         options={equipments}
                         onChange={(value: number) => onChange(value, activityIndex, index)}
                         style={selectStyles}
+                        value={value === 0 ? null : value}
                     />
                 </label>
             </Col>

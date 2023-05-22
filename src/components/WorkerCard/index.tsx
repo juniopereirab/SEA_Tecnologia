@@ -31,7 +31,10 @@ function WorkerCard({ worker }: IWorkerCard) {
         <span>Editar funcionário</span>
       ),
       onClick: () => {
-        dispatch(setRegistrationMode(true));
+        dispatch(setRegistrationMode({
+          isRegistrationMode: true,
+          worker,
+        }));
       }
     },
     {
@@ -40,7 +43,10 @@ function WorkerCard({ worker }: IWorkerCard) {
         <span>Deletar funcionário</span>
       ),
       onClick: () => {
-        dispatch(setDeleteModalOpen(true));
+        dispatch(setDeleteModalOpen({
+          isDeleteModalOpen: true,
+          workerId: worker.id,
+        }));
       }
     }
   ];

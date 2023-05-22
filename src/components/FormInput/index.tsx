@@ -2,6 +2,7 @@ import { DatePicker, Select, Space } from 'antd';
 import InputMask from 'react-input-mask';
 import React from 'react';
 import "./styles.scss";
+import dayjs from 'dayjs';
 
 interface IFormInput {
     type: 'text' | 'date' | 'option' | 'select';
@@ -9,10 +10,11 @@ interface IFormInput {
     label?: string;
     placeholder?: string;
     items?: ISelectOptionInput[];
-    value: string | number;
+    value?: string | number ;
     onChange: any;
     name: string;
     id: string;
+    dateValue?: dayjs.Dayjs | null;
 }
 
 const datePickerStyle: React.CSSProperties = {
@@ -31,13 +33,14 @@ function FormInput({
     onChange,
     name,
     id,
+    dateValue,
 }: IFormInput) {
   return (
     <React.Fragment>
         {mask && (
             <label>
                 {label}
-                <InputMask name={name} id={id} mask={mask} value={value} onChange={onChange} className='basic-input'/>
+                <InputMask mask={mask} maskChar={" "} value={value} onChange={onChange} className='basic-input' name={name} id={id} />
             </label>
         )}
         {type === 'text' && !mask && (
@@ -64,10 +67,11 @@ function FormInput({
                 {label}
                 <Select
                     bordered={false}
-                    defaultValue={items ? items[0].value : null}
+                    defaultValue={null}
                     onChange={onChange}
                     options={items}
                     style={datePickerStyle}
+                    value={value}
                 />
             </label>
         )}
@@ -80,6 +84,7 @@ function FormInput({
                     format="DD/MM/YYYY"
                     onPanelChange={onChange}
                     onChange={onChange}
+                    value={dateValue}
                 />
             </label>
         )}
