@@ -40,9 +40,12 @@ Para rodar o projeto, basta executar os seguintes comandos:
 ```
 $ git clone https://github.com/juniopereirab/SEA_Tecnologia
 $ cd SEA_Tecnologia
-$ yarn install  # Será instalado as dependências
-$ yarn start
+$ npm install  # Será instalado as dependências
+$ npm start
 ```
+
+Versão do Node - v22.12.0
+Versão do NPM - 10.9.0
 
 Além disso é necessário executar a API Mock criada com o json-server, para isso, basta rodar os seguintes comandos, na pasta raiz do projeto:
 
